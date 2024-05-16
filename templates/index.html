@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Message Demo</h1>
+        <h2>Would You like to send a message, receive a message or perform an attack?</h2>
+        <ul>
+            <li><a href="{{ url_for('sender') }}">Send</a></li>
+            <li><a href="{{ url_for('receiver') }}">Receive</a></li>
+            <li><a href="{{ url_for('attack') }}">Perform Attack</a></li>
+        </ul>
+    </div>
+</body>
+</html>

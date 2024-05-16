@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Sender Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sender Result</h1>
+        <p>Hash Value: {{ hash_value }}</p>
+        <p>Nonce: {{ nonce }}</p>
+        <p>Checksum: {{ checksum }}</p>
+    </div>
+</body>
+</html>

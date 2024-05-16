@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Sender</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Sender</h1>
+        <form method="POST" action="{{ url_for('sender') }}">
+            <label for="message">Enter Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+            <label for="nonce">Enter Nonce Value:</label><br>
+            <input type="text" id="nonce" name="nonce"><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

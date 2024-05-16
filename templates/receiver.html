@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Receiver</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Receiver</h1>
+        <form method="POST" action="{{ url_for('receiver') }}">
+            <label for="received_message">Received Message:</label><br>
+            <input type="text" id="received_message" name="received_message"><br>
+            <label for="received_hash">Received Hash:</label><br>
+            <input type="text" id="received_hash" name="received_hash"><br>
+            <label for="nonce">Nonce:</label><br>
+            <input type="text" id="nonce" name="nonce"><br>
+            <label for="received_checksum">Received Checksum:</label><br>
+            <input type="number" id="received_checksum" name="received_checksum"><br>
+            <button type="submit">Receive Message</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attack</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Perform Attack</h1>
+        <form method="POST" action="{{ url_for('attack') }}">
+            <label for="user_message">Enter Message that you want to tamper it with:</label><br>
+            <textarea id="user_message" name="user_message" rows="4" cols="50"></textarea><br>
+            <label for="message">Received Message:</label><br>
+            <input type="text" id="message" name="message"><br>
+            <label for="received_hash">Received Hash:</label><br>
+            <input type="text" id="received_hash" name="received_hash"><br>
+            <label for="nonce">Nonce:</label><br>
+            <input type="text" id="nonce" name="nonce"><br>
+            <label for="received_checksum">Received Checksum:</label><br>
+            <input type="number" id="received_checksum" name="received_checksum"><br>
+            <button type="submit">Perform Attack</button>
+        </form>
+    </div>
+</body>
+</html>
